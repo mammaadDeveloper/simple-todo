@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  backend:
+    build:
+      context: ./apps/backend
+      dockerfile: Dockerfile
+    image: simple-todo-backend:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+
+  frontend:
+    image: nginx:alpine
+    ports:
+      - "5173:80"
+    volumes:
+      - ./apps/frontend/dist:/usr/share/nginx/html:ro
+    depends_on:
+      - backend
