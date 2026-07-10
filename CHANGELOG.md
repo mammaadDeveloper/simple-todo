@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/mammaadDeveloper/simple-todo/compare/v0.0.0...v0.5.0) (2026-07-10)
+
+### Features
+
+- **backend, nestjs, api:** the project's back-end component ([54f283c](https://github.com/mammaadDeveloper/simple-todo/commit/54f283cbd27c98336b286d103e6bb5ce8c1c6c73))
+- **swagger:** setup swagger ([0a50916](https://github.com/mammaadDeveloper/simple-todo/commit/0a50916ffb00d82372319d79545b924431c3a760))
+
 ## 0.0.0 (2026-07-10)
 
 ### Features

@@ -1,12 +1,12 @@
 {
   "name": "@simple-todo/source",
-  "version": "0.0.0",
+  "version": "0.5.0",
   "license": "MIT",
   "scripts": {
     "prepare": "husky",
     "commit": "cz",
     "release": "standard-version",
-    "relase:dry": "standard-version --dry-run"
+    "release:dry": "standard-version --dry-run"
   },
   "private": true,
   "dependencies": {
