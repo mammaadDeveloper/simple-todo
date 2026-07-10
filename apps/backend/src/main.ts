@@ -10,6 +10,7 @@ import { json } from 'body-parser';
 import * as compression from 'compression';
 import helmet from 'helmet';
 import { AppModule } from './app/app.module';
+import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -69,6 +70,17 @@ async function bootstrap() {
 
   // compress
   app.use(compression);
+
+  // swagger
+  const documentBuilder = new DocumentBuilder()
+    .setTitle('Simple Todo API Documentation.')
+    .setDescription('API documentation for the simple To-Do app project.')
+    .setVersion('0.0.0')
+    .addTag('Todo')
+    .build();
+  const documentFactory = () =>
+    SwaggerModule.createDocument(app, documentBuilder);
+  SwaggerModule.setup('api', app, documentFactory);
 
   await app.listen(config.get<number>('API_PORT', 3000));
 }
