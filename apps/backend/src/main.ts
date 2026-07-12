@@ -7,7 +7,6 @@ import { ValidationPipe } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';
 import { json } from 'body-parser';
-import * as compression from 'compression';
 import helmet from 'helmet';
 import { AppModule } from './app/app.module';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
@@ -68,9 +67,6 @@ async function bootstrap() {
       }),
     );
 
-  // compress
-  app.use(compression);
-
   // swagger
   const documentBuilder = new DocumentBuilder()
     .setTitle('Simple Todo API Documentation.')
@@ -80,7 +76,7 @@ async function bootstrap() {
     .build();
   const documentFactory = () =>
     SwaggerModule.createDocument(app, documentBuilder);
-  SwaggerModule.setup('api', app, documentFactory);
+  SwaggerModule.setup('api/docs', app, documentFactory);
 
   await app.listen(config.get<number>('API_PORT', 3000));
 }
