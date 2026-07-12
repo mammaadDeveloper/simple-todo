@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.6.0](https://github.com/mammaadDeveloper/simple-todo/compare/v0.5.0...v0.6.0) (2026-07-12)
+
+### ⚠ BREAKING CHANGES
+
+- **api, react, front:** Updated main module imports for the database and entities. React Query
+  configuration. Modified validation logic.
+
+### Features
+
+- front-end implementation ([c46899a](https://github.com/mammaadDeveloper/simple-todo/commit/c46899a2e6a5558af33e57c8d25755be432563b8))
+
+### Bug Fixes
+
+- **api, react, front:** resolving operational issues with the programs ([f1e6346](https://github.com/mammaadDeveloper/simple-todo/commit/f1e63463da7c8e997db7b6effa24482c5d577081))
+
 ## [0.5.0](https://github.com/mammaadDeveloper/simple-todo/compare/v0.0.0...v0.5.0) (2026-07-10)
 
 ### Features

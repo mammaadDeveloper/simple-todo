@@ -19,10 +19,11 @@ import { TodoEntity } from './entities/todo.entity';
       useFactory: (config: ConfigService) => ({
         type: 'postgres',
         url: config.get('DATABASE_URL'),
-        entities: [TodoEntity],
+        autoLoadEntities: true,
         synchronize: true,
       }),
     }),
+    TypeOrmModule.forFeature([TodoEntity]),
   ],
   controllers: [AppController],
   providers: [
